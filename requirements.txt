@@ -1,0 +1,9 @@
+# Dependencias para Carga de Datos y EDA
+pandas
+numpy
+matplotlib
+seaborn
+ucimlrepo
+# Dependencias para Machine Learning
+scikit-learn
+joblib
