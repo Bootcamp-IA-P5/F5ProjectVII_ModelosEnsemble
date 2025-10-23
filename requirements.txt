@@ -3,7 +3,12 @@ pandas
 numpy
 matplotlib
 seaborn
-ucimlrepo
+kagglehub[pandas-datasets] 
 # Dependencias para Machine Learning
 scikit-learn
 joblib
+# Dependencias para API
+fastapi
+uvicorn
+# Dependencias para Modelos
+xgboost
