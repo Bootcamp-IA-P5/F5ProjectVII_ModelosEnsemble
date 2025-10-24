@@ -12,3 +12,6 @@ fastapi
 uvicorn
 # Dependencias para Modelos
 xgboost
+# Dependencias para Streamlit
+streamlit
+requests # Para hacer la llamada HTTP al backend
