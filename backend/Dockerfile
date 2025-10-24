@@ -6,8 +6,8 @@ WORKDIR /app
 
 # Paso 3: Copiar y luego instalar las dependencias
 # Esto es eficiente: si requirements.txt no cambia, Docker no repite la instalación
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt /tmp/
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 # Paso 4: Copiar el modelo entrenado (el artefacto más crítico)
 # Usamos un target específico para este archivo, manteniendo el orden
