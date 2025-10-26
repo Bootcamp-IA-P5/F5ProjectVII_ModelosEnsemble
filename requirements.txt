@@ -5,7 +5,7 @@ matplotlib
 seaborn
 kagglehub[pandas-datasets] 
 # Dependencias para Machine Learning
-scikit-learn==1.6.1  # ¡ACTUALIZADO! Fijamos la versión de scikit-learn
+scikit-learn==1.7.2  # ¡ACTUALIZADO! Compatible con el modelo recreado
 joblib
 # Dependencias para API
 fastapi

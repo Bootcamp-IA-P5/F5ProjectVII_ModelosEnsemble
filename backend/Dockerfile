@@ -1,6 +1,9 @@
 # Paso 1: Usar una imagen base de Python pequeña y oficial
 FROM python:3.12-slim
 
+# Instalar curl para debugging
+RUN apt-get update && apt-get install -y curl && rm -rf /var/lib/apt/lists/*
+
 # Paso 2: Establecer la carpeta de trabajo (el directorio principal dentro del contenedor)
 WORKDIR /app
 
