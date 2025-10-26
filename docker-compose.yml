@@ -1,35 +1,48 @@
 # CÓDIGO: docker-compose.yml (RAÍZ DEL PROYECTO)
-version: '3.8'
-
 services:
   # 1. SERVICIO DE BACKEND (API de ML)
   backend-api:
     container_name: energy-predictor-api
     build:
-      context: . 
+      context: .
       dockerfile: backend/Dockerfile
     ports:
-      - "${API_PORT}:${API_PORT}" # Mapeo usando .env (8000:8000)
+      - "${API_PORT:-8000}:8000" # Mapeo usando .env (8000:8000) con fallback
     networks:
       - energy_net
     # Usa las variables definidas en .env
     env_file:
       - .env
     restart: always
+    # Configuración de logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   # 2. SERVICIO DE FRONTEND (Streamlit)
   frontend-web:
     container_name: energy-predictor-web
     build:
-      context: . 
-      dockerfile: frontend/Dockerfile 
+      context: .
+      dockerfile: frontend/Dockerfile
     ports:
       - "8501:8501" # Mapeamos al 8501 por defecto de Streamlit
     networks:
       - energy_net
     depends_on:
-      - backend-api 
+      - backend-api
     restart: always
+    # Configuración de logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+    # Variables de entorno para detección de Docker
+    environment:
+      - DOCKER_CONTAINER=true
 
 # 3. DEFINICIÓN DE REDES
 networks:
