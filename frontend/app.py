@@ -428,13 +428,6 @@ def main():
                 *Cada escenario está calibrado para producir su categoría específica de predicción.*
                 """)
 
-            selected_scenario = None
-            for i, scenario in enumerate(scenarios):
-                if scenario_cols[i].button(f"📋 {scenario}", width="stretch"):
-                    selected_scenario = scenario
-                    logger.info(f"🎯 Usuario seleccionó escenario: {scenario}")
-                    logger.info(f"📊 Datos del escenario: {create_scenario_data(scenario)}")
-
             # Variables críticas que el usuario SÍ ingresa (TOP 10)
             st.write("**📝 Variables Principales (Top 10 por importancia):**")
 
