@@ -1,19 +1,20 @@
 """
-Página de Documentación - Smart City Energy Demand Predictor
+🚨 Smart City Crisis Guardian - Documentación Técnica Completa
+Manual del sistema de prevención de crisis energéticas urbanas
 """
 import streamlit as st
 from utils import *
 
 def show_documentation_page():
-    """Página de documentación técnica completa"""
+    """Manual del Guardián - Documentación técnica completa del sistema de prevención de crisis"""
 
-    st.header("📋 Documentación Técnica")
-    st.caption("Información completa sobre el proyecto y su implementación")
+    st.header("📋 Manual del Guardián - Documentación Técnica")
+    st.caption("Guía completa del sistema de prevención de crisis energéticas urbanas")
 
     st.info("""
     **🎯 Enfoque Inteligente:**
     - Solo 10 variables críticas para el usuario (las más importantes según feature importance)
-    - 23 variables generadas automáticamente (con valores realistas por defecto)
+    - 23 variables calculadas automáticamente (con valores realistas por defecto)
     - Backend sin cambios (sigue recibiendo 33 variables)
     - UX simplificada sin perder funcionalidad predictiva
     - Basado en análisis real del dataset de 72,960 registros
@@ -46,7 +47,7 @@ def show_documentation_page():
     st.dataframe(df_scenarios, width="stretch", hide_index=True)
 
     st.success("""
-    **💡 Ventajas para Presentaciones:**
+    **🛡️ Ventajas del Guardián para Presentaciones:**
     - **Demostración completa:** Cubre todos los rangos de predicción del modelo
     - **Tiempo eficiente:** Carga automática de valores realistas
     - **Impacto visual:** Cada escenario produce colores diferentes (🟢🔵🟡🟠🔴)
@@ -62,12 +63,14 @@ def show_documentation_page():
         st.write("**🎨 Frontend (Streamlit):**")
         st.code("""
 frontend/
-├── main.py          # Navegación principal
-├── prediction.py    # Página de predicción
-├── eda.py          # Análisis exploratorio
-├── models.py       # Modelos y ensemble
-├── documentation.py # Esta documentación
-└── utils.py        # Funciones compartidas
+├── main.py                    # 🚨 Centro de Control del Guardián
+├── pages/
+│   ├── 02_🔮_Prediction.py   # Simulador de escenarios de crisis
+│   ├── 03_📊_EDA.py          # Inteligencia de datos de emergencia
+│   ├── 04_🤖_Models.py       # Motor IA de prevención
+│   └── 05_📋_Documentation.py # Manual del Guardián
+├── utils.py                   # Funciones de vigilancia
+└── __init__.py               # Sistema de protección
         """, language="text")
 
     with col2:
@@ -290,9 +293,9 @@ streamlit run main.py
     """)
 
     st.success("""
-    **🏆 Proyecto Completado con Éxito**
+    **🛡️ Guardián de Crisis Completado con Éxito**
 
-    Este proyecto demuestra un dominio avanzado de:
+    Este sistema de IA representa la vanguardia en **prevención de crisis energéticas urbanas**:
 
     - **Machine Learning supervisado** con técnicas de ensemble
     - **Optimización de modelos** mediante GridSearchCV y validación cruzada
