@@ -17,4 +17,4 @@ COPY frontend/ .
 EXPOSE 8501
 
 # Comando de arranque de Streamlit con el nuevo main.py
-CMD ["streamlit", "run", "main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "🏠_Home.py", "--server.port=8501", "--server.address=0.0.0.0"]

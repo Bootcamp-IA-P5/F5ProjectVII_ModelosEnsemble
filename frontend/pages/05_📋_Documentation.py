@@ -3,6 +3,9 @@ Página de Documentación - Smart City Energy Demand Predictor
 Documentación técnica completa del proyecto
 """
 import streamlit as st
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from utils import *
 
 def main():
