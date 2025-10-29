@@ -23,6 +23,10 @@ Predecir picos de demanda energética con antelación es crucial para:
 
 ## 🏗️ Arquitectura del Sistema
 
+### 🌐 Visión General
+
+El sistema sigue una arquitectura modular basada en microservicios, con una clara separación entre el frontend, backend y recursos del modelo. La arquitectura está diseñada para ser escalable, mantenible y fácil de desplegar en diferentes entornos.
+
 ```
 📁 Proyecto/
 ├── 📖 README.md                    # Documentación completa del Guardián
@@ -33,37 +37,65 @@ Predecir picos de demanda energética con antelación es crucial para:
 │   ├── api/
 │   │   ├── main.py                # Endpoints y lógica principal
 │   │   └── schemas.py             # Modelos Pydantic (validación)
-│   └── Dockerfile
+│   └── Dockerfile                 # Configuración de contenedor
 ├── 🚨 frontend/                   # Centro de Control del Guardián (Streamlit)
 │   ├── 🏠_Home.py                 # 🚨 Dashboard principal del Guardián
 │   ├── pages/
 │   │   ├── 02_🔮_Prediction.py   # Simulador de escenarios de crisis
-│   │   ├── 03_📊_EDA.py          # Inteligencia de datos de emergencia
-│   │   ├── 04_🤖_Models.py       # Motor IA de prevención
-│   │   └── 05_📋_Documentation.py # Manual del Guardián
-│   ├── utils.py                   # Funciones de vigilancia
-│   ├── __init__.py               # Sistema de protección
-│   └── Dockerfile
-├── 📊 resources/                  # Artefactos del proyecto
-│   ├── 🤖 models/                # Modelos de ML
+│   │   ├── 03_📊_EDA.py          # Herramienta de Análisis Exploratorio de Datos
+│   │   ├── 04_🤖_Models.py       # Gestión y comparación de modelos
+│   │   └── 05_📋_Documentation.py # Documentación del sistema
+│   ├── utils.py                   # Utilidades y funciones auxiliares
+│   ├── __init__.py                # Configuración de la aplicación
+│   └── Dockerfile                 # Configuración de contenedor
+├── 📊 resources/                  # Recursos del sistema
+│   ├── 🤖 models/                # Modelos de ML entrenados
 │   │   ├── model_RandomForest_FINAL.pkl      # Modelo principal (51.8 MB)
 │   │   └── model_LogisticRegression_MVP.pkl  # Modelo alternativo (10.8 KB)
-│   ├── 📚 notebooks/             # Análisis exploratorio
-│   └── 📦 old/deprecated/        # Archivos históricos preservados
-│       ├── DEBUG_README.md
-│       ├── LOGS_GUIDE.md
-│       ├── model_RandomForest_FINAL_old.pkl
-│       ├── model_RandomForest_FINAL_v2.pkl
-│       └── mvp_model.pkl
-└── 🛠️ scripts/                 # Scripts de desarrollo (OPCIONALES)
-    ├── logs.sh
-    ├── monitor.sh
-    ├── test.sh
-    ├── restart.sh
-    ├── start.sh
-    ├── update_frontend.sh
-    └── recreate_model.py
+│   ├── 📚 notebooks/             # Cuadernos de análisis y desarrollo
+│   │   ├── EDA_Dataset_VIIEnsembleSmartCities.ipynb
+│   │   ├── ModelOptimization_EnsembleTechniques.ipynb
+│   │   └── eda_dataset_viiensemblesmartcities.py
+└── 🛠️ scripts/                   # Scripts de automatización
+    ├── monitor.sh                # Monitoreo del sistema
+    ├── recreate_model.py         # Reentrenamiento de modelos
+    ├── restart.sh                # Reinicio de servicios
+    ├── test.sh                   # Pruebas del sistema
+    └── update_frontend.sh        # Actualización del frontend
 ```
+
+### 🔄 Flujo de Datos
+
+1. **Entrada de Datos**: Los datos fluyen a través de la interfaz de usuario de Streamlit
+2. **Procesamiento**: El backend procesa las solicitudes y aplica los modelos de ML
+3. **Visualización**: Los resultados se presentan en dashboards interactivos
+4. **Almacenamiento**: Los modelos y datos se almacenan localmente en la carpeta resources
+
+### 📊 Módulos Principales
+
+#### 1. Análisis Exploratorio de Datos (EDA)
+- Visualización de distribución de categorías
+- Análisis temporal de la demanda
+- Matriz de correlación entre variables
+- Métricas de rendimiento de modelos
+
+#### 2. Predicción en Tiempo Real
+- Formulario interactivo para predicciones
+- Procesamiento de características en tiempo real
+- Visualización de resultados y niveles de riesgo
+
+#### 3. Gestión de Modelos
+- Comparación de modelos (Random Forest, Regresión Logística, etc.)
+- Métricas de rendimiento detalladas
+- Matrices de confusión
+
+### 🛠️ Tecnologías Clave
+
+- **Frontend**: Streamlit para visualización interactiva
+- **Backend**: FastAPI para servicios web
+- **Machine Learning**: Scikit-learn, XGBoost
+- **Visualización**: Matplotlib, Seaborn, Plotly
+- **Despliegue**: Docker y Docker Compose
 
 ## 🎨 Características del Sistema de Protección
 
