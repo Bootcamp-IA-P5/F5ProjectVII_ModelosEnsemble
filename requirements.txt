@@ -1,0 +1,17 @@
+# Dependencias para Carga de Datos y EDA
+pandas
+numpy
+matplotlib
+seaborn
+kagglehub[pandas-datasets] 
+# Dependencias para Machine Learning
+scikit-learn==1.7.2  # ¡ACTUALIZADO! Compatible con el modelo recreado
+joblib
+# Dependencias para API
+fastapi
+uvicorn
+# Dependencias para Modelos
+xgboost
+# Dependencias para Streamlit
+streamlit
+requests # Para hacer la llamada HTTP al backend
