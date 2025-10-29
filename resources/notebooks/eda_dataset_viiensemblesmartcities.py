@@ -48,6 +48,21 @@ except Exception as e:
 # Celda 1.0: Inspección de Columnas y Renombrado (CORREGIDA)
 
 print("--- INSPECCIÓN DE COLUMNAS ---")
+print("Columnas disponibles en el dataset:")
+print(df.columns.tolist())
+
+# Análisis exploratorio inicial
+print("\n--- PRIMERAS FILAS DEL DATASET ---")
+display(df.head())
+
+print("\n--- ESTADÍSTICAS DESCRIPTIVAS ---")
+display(df.describe(include='all'))
+
+# Si el dataset es muy ancho, mostramos solo las primeras 10 columnas
+if len(df.columns) > 10:
+    print("\n--- PRIMERAS 10 COLUMNAS (muestra parcial) ---")
+    display(df[df.columns[:10]].head())
+
 # La lista de columnas ya fue proporcionada. Identificamos: 'Timestamp'
 
 # 🟢 CORRECCIÓN: Usamos 'Timestamp' como el nombre real.

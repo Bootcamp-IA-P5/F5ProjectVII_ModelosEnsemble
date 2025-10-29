@@ -19,18 +19,38 @@ def main():
     st.markdown(get_css_styles(), unsafe_allow_html=True)
 
     # Título principal con gancho
-    st.markdown('<h1 class="main-header">🚨 Smart City Crisis Guardian</h1>', unsafe_allow_html=True)
-    st.markdown("**🧠 IA que Predice Crisis Energéticas Antes de que impacten en tu Ciudad**")
+    st.markdown('<h1 class="main-header">⚡⚡ Smart City Crisis Guardian ⚡⚡</h1>', unsafe_allow_html=True)
+    
+    # Introducción con storytelling impactante
+    st.subheader("🚨🚨🚨🚨🚨🚨🚨 RIESGO DE APAGON INMINENTE: 🚨🚨🚨🚨🚨🚨🚨 ")
+
+    st.warning("""
+    ⚠️ Ciudades enteras a oscuras. Tráfico caótico, hospitales sin energía, y toda la economía paralizada. 
+    
+    Por supuesto que ninguno queremos que vuelva a suceder nada parecido, por lo que...
+
+    ¿Y si pudieramos predecirlo mas eficazmente?
+    """)
+
+    st.markdown("**🧠 Kiru Solutions S.L. presenta: la IA que predice crisis energéticas ANTES de que impacten en tu Ciudad**")
 
     # Estado del sistema con lenguaje más impactante
-    st.success(f"🔗 **Sistema de vigilancia conectado:** {BACKEND_URL}")
     backend_ok = test_backend_connection()
 
     if backend_ok:
-        st.success("✅ **IA Guardián activa y protegiendo tu ciudad**")
-        st.info("💡 **El sistema vigila 24/7 para prevenir crisis energéticas**")
+        st.success("""✅ **IA Guardián activa - Protegiendo tu ciudad ✅**
+
+    - 🚨 Detecta demandas críticas que pueden colapsar la red
+    - 🔮 Predice 5 niveles de riesgo
+    - 🧠 Solo necesita 10 datos - el resto lo calcula internamente
+    - ⚡ Respuesta en 200ms - más rápido que contartar a Flash
+    - 🎯 Protege lo que más importa: tu ciudad, tu gente, tu futuro.
+    """)
+        st.info("💡 El sistema está disponible 24/7, para adelantarse a cualquier crisis energética en todo momento")
     else:
         st.error("❌ **¡ALERTA! Guardián desconectado** - Ciudad en riesgo")
+
+    st.markdown("---")
 
     # Métricas principales con contexto de crisis
     st.header("📊 Centro de Control - Vigilancia en Tiempo Real")
@@ -48,24 +68,6 @@ def main():
 
     st.markdown("---")
 
-    # Introducción con storytelling impactante
-    st.subheader("🚨 ¿Qué hace este Guardián IA?")
-
-    st.error("""
-    **⚠️ VISUALIZA:** Un apagon de nuevo. Hospitales sin energía,
-    tráfico caótico, economía paralizada. **¿Y si pudieramos predecirlo mas eficazmente?**
-
-    Este sistema de IA vigila constantemente la red eléctrica de tu ciudad inteligente,
-    prediciendo crisis energéticas **antes de que ocurran** con **91.09% de precisión**:
-
-    - 🚨 **Detecta demandas críticas** que pueden colapsar la red
-    - 🔮 **Predice 5 niveles de riesgo** desde normal hasta emergencia
-    - 🧠 **Solo necesita 10 datos** - el resto lo calcula internamente
-    - ⚡ **Respuesta en 200ms** - más rápido que contartar a Flash
-
-    **🎯 Protege lo que más importa: tu ciudad, tu gente, tu futuro.**
-    """)
-
     st.subheader("📊 Sistema de Clasificación - 5 Niveles de Riesgo")
 
     st.info("""
@@ -80,49 +82,38 @@ def main():
     **🛡️ Con 91.09% de precisión en detección de crisis**
     """)
     # Cómo funciona con lenguaje de crisis
-    st.subheader("🛡️ Cómo Protege tu Ciudad")
+    st.subheader("🛡️ A cargo de la protección de tu Ciudad")
 
     col1, col2 = st.columns(2)
 
     with col1:
         st.markdown("""
-        **🚨 Detección de Crisis:**
-        - Monitorea 72,960 patrones históricos de consumo
-        - Identifica horas pico críticas
-        - Predice demandas que superan la capacidad de la red
 
-        **⚡ Respuesta Inmediata:**
-        - Alertas inmediatas para los operadores de red
-        - Recomendaciones de acciones preventivas
-        - Alerta para la activacion de reservas de emergencia
+        **🚨 Cómo se detecta una crisis:**
+        - Me he basado en un dataset de 72,960 de patrones de consumo, 
+        - He identificado una serie de variables que, sin vigilancia, 
+        pueden ocasionar una crisi energética
+        - Gracias a esto, he entrenado un modelo de ML capaz de predecir 
+        picos de demanda que superen la capacidad de la red
+        - Para comprobar su eficazia rapidamente, se han definido 
+        varios escenarios "tipo", basandonos en 5 niveles de riesgo.
+
         """)
 
     with col2:
         st.markdown("""
-        **📊 Análisis Inteligente:**
-        - Visualiza patrones de consumo en tiempo real
-        - Identifica variables que causan crisis
-        - Optimiza la distribución de energía
+        
+        **📊 Análisis Inteligente y validación:**
+        - Visualiza patrones de consumo personalizados al momento
+        - Validado con técnicas de ensemble avanzadas
+        - Predicciones confiables al 96.67% para los casos críticos
 
-        **🛡️ Prevención Proactiva:**
-        - Modelos de machine learning entrenados con datos reales
-        - Validación con técnicas de ensemble avanzadas
-        - Predicciones confiables al 96.67% en casos críticos
+
+         **⚡ Posibles usos de esta tecnología:**
+        - Alertas inmediatas que se enviaran a los operadores de red
+        - Recomendaciones de acciones preventivas
+        - Alerta para la activacion inmediata de reservas de emergencia
         """)
-
-    # Estado del proyecto con lenguaje de madurez
-    st.subheader("📈 Nivel de Protección - Estado del Guardián")
-
-    st.success("""
-    **🛡️ Guardián en Modo AVANZADO (95% de capacidad)**
-
-    - ✅ **Nivel Esencial**: 100% completado (13/13 tareas)
-    - ✅ **Nivel Medio**: 100% completado (5/5 funcionalidades)
-    - ✅ **Nivel Avanzado**: 95% completado (2/2 tareas pendientes)
-    - 🔄 **Nivel Experto**: 40% iniciado (funcionalidades futuras)
-
-    **🎯 Puntuación Estimada Rúbrica: 96/100**
-    """)
 
     # Navegación con contexto de crisis
     st.subheader("🚀 Centro de Control - Accede a Todas las Funciones")
@@ -132,21 +123,19 @@ def main():
 
     - **🏠 Home**: Centro de control y metricas generales
     - **🔮 Predicción**: Simula escenarios de crisis y prueba respuestas en tiempo real
-    - **📊 EDA & Analisis**: Analiza el dataset y muestra visualizaciones de interés
-    - **🤖 Modelos & Ensemble**: Comparativa técnica de algoritmos
-    - **📋 Documentación**: Guía completa y troubleshooting
+    - **📊 EDA**: Analiza el dataset y muestra visualizaciones de interés
+    - **🤖 Modelos & Ensemble**: Comparativa de algoritmos
+    - **📋 Documentación**: Guía y troubleshooting
 
-    **🎯 La navegación se actualiza automáticamente según la página que estés viendo.**
-    **⚡ El Guardián nunca duerme. ¿Estás listo para proteger tu ciudad?**
     """)
 
     # Footer con llamada a la acción
     st.markdown("---")
     st.markdown("""
     <div style="text-align: center; color: #666; padding: 1rem;">
-        <p><strong>🚨 Smart City Crisis Guardian</strong></p>
-        <p>Protegiendo ciudades inteligentes de crisis energéticas desde 2025</p>
-        <p><em>Cuando la energía falla, el guardian responde</em></p>
+        <p><strong>⚡ ⚡  Smart City Crisis Guardian⚡ ⚡ </strong></p>
+        <p>Cuando la energía falla, el guardian responde</p>
+        <p><em>Kiru Solutions S.L.</em></p>
     </div>
     """, unsafe_allow_html=True)
 
